@@ -1,0 +1,212 @@
+/* Cartão PRAZO — cores e fontes vêm dos tokens do Vibe, então seguem o tema do monday. */
+
+body {
+  margin: 0;
+  font-family: var(--font-family, "Figtree", "Roboto", sans-serif);
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.App {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 8px;
+}
+
+.prazo-card {
+  box-sizing: border-box;
+  height: calc(100vh - 16px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 8px;
+  background: var(--primary-background-color);
+  padding: 8px 16px 12px;
+}
+
+.prazo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+}
+
+.prazo-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+}
+
+.prazo-icon {
+  color: var(--secondary-text-color);
+}
+
+.prazo-spacer {
+  flex: 1;
+}
+
+.prazo-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.prazo-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prazo-table-wrap {
+  overflow: auto;
+}
+
+.prazo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.prazo-table thead th {
+  text-align: left;
+  vertical-align: bottom;
+  font-weight: 600;
+  padding: 4px 8px 6px;
+  border-bottom: 1.5px solid var(--primary-text-color);
+  position: sticky;
+  top: 0;
+  background: var(--primary-background-color);
+}
+
+.prazo-table thead th.col-date {
+  max-width: 96px;
+}
+
+.prazo-table tbody th,
+.prazo-table tbody td {
+  padding: 3px 8px;
+  white-space: nowrap;
+  font-weight: 400;
+  text-align: left;
+}
+
+.prazo-table tbody tr:nth-child(even) {
+  background: var(--allgrey-background-color);
+}
+
+.prazo-table .col-etapa {
+  min-width: 180px;
+  border-right: 1.5px solid var(--primary-text-color);
+}
+
+.prazo-table thead .col-etapa {
+  border-right: none;
+}
+
+.prazo-table .col-pct {
+  text-align: right !important;
+}
+
+/* Linha do grupo GERAL: mesmo estilo das demais, como na referência.
+   Para destacar, troque por font-weight: 600. */
+.prazo-table tr.is-total th,
+.prazo-table tr.is-total td {
+  font-weight: 400;
+}
+
+/* Menu de configurações */
+.cfg-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  font-size: 13px;
+}
+
+.cfg-intro {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+.cfg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.cfg-group {
+  margin: 0;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 8px;
+  padding: 8px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cfg-legend {
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.cfg-mode {
+  display: flex;
+  gap: 16px;
+}
+
+.cfg-mode label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.cfg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cfg-label {
+  color: var(--secondary-text-color);
+}
+
+.cfg-select {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--ui-border-color);
+  border-radius: 4px;
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.cfg-empty {
+  margin: 0;
+  color: var(--secondary-text-color);
+  font-style: italic;
+}
+
+.cfg-error {
+  margin: 0;
+  color: var(--negative-color, #d83a52);
+}
+
+.cfg-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prazo-missing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
